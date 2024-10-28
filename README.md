@@ -12,21 +12,17 @@
 - `chgrp`: chgrp - change group ownership <br>
 - `chown`: change file owner and group <br>
 
-Copy testfile.txt file from currentdirectory to /tmp
+
+- `cp testfile.txt /tmp`: Copy testfile.txt file from currentdirectory to /tmp <br>
+
+- `rm testfile.txt`:	Delete testfile.txt <br>
+
 ```bash
-cp testfile.txt /tmp
+rm testfile.txt testfile1.txt  # Delete multiple files, required permission
 ```
-Delete testfile.txt
+
 ```bash
-rm testfile.txt	
-```
-Delete multiple files, required permission
-```bash
-rm testfile.txt testfile1.txt
-```
-Delete multiple files, no permission required
-```bash
-rm -rf testfile.txt testfile1.txt
+rm -rf testfile.txt testfile1.txt  # Delete multiple files, no permission required
 ```
 Delete all files, directories
 
