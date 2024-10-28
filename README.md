@@ -53,3 +53,8 @@ Root has two directories name testfolder1, testfolder2, move all file from testf
 ```bash
 mv testfolder1/* testfolder2
 ```
+Suppose root has two directories testfolder1 and testfolder2. testfolder1 has five directories folder 1, folder2, folder3, folder4, folder5. You have to move all folder except folder1 from testfolder1 to testfolder2 <br>
+mv SOURCE_DIRECTORY/!(unwanted_filename) TARGET_DIRECTORY	
+```bash
+mv testfolder1/!(folder1) testfolder2
+```
