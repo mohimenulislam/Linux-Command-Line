@@ -37,10 +37,19 @@ Move testfile.txt from current directory to /tmp
 ```bash
 mv testfile /tmp	
 ```
-
-# 		// 
-# mv [current_name] [new_file_name] //rename files,directories
-# mv testfile testfile1		//rename testfile to testfile1
-# mv testfile ../			//move file to previous directory
-# mv * ../				//move all files to previous directory
-# mv testfolder1/* testfolder2	//root has two directories name testfolder1, testfolder2, move all file from test1 directory to test2 directory
+Rename files,directories
+```bash
+mv testfile newtestfile	
+```
+Move file to previous directory
+```bash
+mv testfile.txt ../		
+```
+Move all files to previous directory
+```bash
+mv * ../
+```
+Root has two directories name testfolder1, testfolder2, move all file from testfolder1 directory to testfolder2 directory
+```bash
+mv testfolder1/* testfolder2
+```
