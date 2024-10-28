@@ -2,7 +2,7 @@
 
 ## File Maintenance Commands
 
-- `cp`: ccopy files and directories <br>
+- `cp`: copy files and directories <br>
 - `mv`: move (rename) files <br>
 - `mkdir`: remove empty directories <br>
 - `rmdir`: remove empty directories <br>
