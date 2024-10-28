@@ -28,10 +28,17 @@ Delete multiple files, no permission required
 ```bash
 rm -rf testfile.txt testfile1.txt
 ```
+Delete all files, directories
 
-# rm -rf testfile testfile1	// remove multiple files, no permission required 
-# rm -rf *				//delete all files, directories
-# mv testfile /tmp		//move testfile to tmp directory 
+```bash
+rm -rf *	
+```
+Move testfile.txt from current directory to /tmp
+```bash
+mv testfile /tmp	
+```
+
+# 		// 
 # mv [current_name] [new_file_name] //rename files,directories
 # mv testfile testfile1		//rename testfile to testfile1
 # mv testfile ../			//move file to previous directory
