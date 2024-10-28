@@ -14,43 +14,18 @@
 
 
 - `cp testfile.txt /tmp`: Copy testfile.txt file from currentdirectory to /tmp <br>
-
 - `rm testfile.txt`:	Delete testfile.txt <br>
+- `rm testfile.txt testfile1.txt`: Delete multiple files, required permission <br>
+- `rm -rf testfile.txt testfile1.txt`: Delete multiple files, no permission required
+- `rm -rf *`:	Delete all files, directories<br>
+- `mv testfile /tmp`: Move testfile.txt from current directory to /tmp	<br>
+- `mv testfile newtestfile`: Rename files,directories	<br>
+- `mv testfile.txt ../`: Move file to previous directory	<br>	
+- `mv * ../`: Move all files to previous directory <br>
+- `mv testfolder1/* testfolder2`: Root has two directories name testfolder1, testfolder2, move all file from testfolder1 directory to testfolder2 directory <br>
 
-```bash
-rm testfile.txt testfile1.txt  # Delete multiple files, required permission
-```
 
-```bash
-rm -rf testfile.txt testfile1.txt  # Delete multiple files, no permission required
-```
-Delete all files, directories
 
-```bash
-rm -rf *	
-```
-Move testfile.txt from current directory to /tmp
-```bash
-mv testfile /tmp	
-```
-Rename files,directories
-```bash
-mv testfile newtestfile	
-```
-Move file to previous directory
-```bash
-mv testfile.txt ../		
-```
-Move all files to previous directory
-```bash
-mv * ../
-```
-Root has two directories name testfolder1, testfolder2, move all file from testfolder1 directory to testfolder2 directory
-```bash
-mv testfolder1/* testfolder2
-```
-Suppose root has two directories testfolder1 and testfolder2. testfolder1 has five directories folder 1, folder2, folder3, folder4, folder5. You have to move all folder except folder1 from testfolder1 to testfolder2 <br>
-mv SOURCE_DIRECTORY/!(unwanted_filename) TARGET_DIRECTORY	
-```bash
-mv testfolder1/!(folder1) testfolder2
-```
+- `mv testfolder1/!(folder1) testfolder2`: Suppose root has two directories testfolder1 and testfolder2. testfolder1 has five directories folder 1, folder2, folder3, folder4, folder5. You have to move all folder except folder1 from testfolder1 to testfolder2. mv SOURCE_DIRECTORY/!(unwanted_filename) TARGET_DIRECTORY	 <br>
+
+
