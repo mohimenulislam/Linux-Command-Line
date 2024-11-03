@@ -21,13 +21,20 @@ Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
-- `last`: Display the record of all logged users.
 
+- `last`: Display the record of all logged users.
+- `id`
+- whoami`
+- `w`
 
 ### Create, modify, and delete user accounts
 - `useradd`
+- `adduser`
 - `userdel`
 - `usermod`
+- `chage`
+- `passwd`
+
 
 Create a user named `alex`
 ```
@@ -49,11 +56,17 @@ userdel alex    # or
 userdel -f alex # -f, --force 
 ```
 
+Rename login username
+```bash
+usermod -l new_username old_username
+```
+
 Search specific user
 ```
 cat /etc/passwd | grep faisal  #or
 grep -i faisal /etc/passwd
 ```
+
 
 faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
 usrname:pass :uid   :gid   :comment:homdir   :shell
@@ -122,8 +135,10 @@ groupdel sysadmin
 ```
 
 Change group name `admin` to `sysadmin`
-```
-groupmod admin -n sysadmin
+``` bash
+groupmod admin -n sysadmin  #or
+groupmod -n sysadmin admin 
+
 ```
 
 Change user password expiry information
