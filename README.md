@@ -61,7 +61,7 @@ usermod -L alex
 ```
 
 Unlock a User named `alex`
-```
+```bash
 passwd -u alex  # --lock
               This  option is used to lock the password of specified account and it is available to root only. The locking is performed by rendering
               the encrypted password into an invalid string (by prefixing the encrypted string with an !). Note that the account is not fully locked
