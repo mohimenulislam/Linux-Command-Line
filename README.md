@@ -23,17 +23,17 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 - `/etc/subuid`: Per user subordinate user IDs.
 
 - `last`: Display the record of all logged users.
-- `id`
-- whoami`
-- `w`
+- `id`:  Displays user and group information for a user.
+- whoami`: Displays the currently logged-in username.
+- `w`: Shows who is logged in and what they are doing.
 
 ### Create, modify, and delete user accounts
-- `useradd`
-- `adduser`
-- `userdel`
-- `usermod`
-- `chage`
-- `passwd`
+- `useradd`: Creates a new user account.
+- `adduser`: Creates a new user account.
+- `userdel`: Deletes a user account.
+- `usermod`: Modifies an existing user account.
+- `chage`: change user password expiry information
+- `passwd`: Sets or changes a user's password
 
 
 Create a user named `alex`
