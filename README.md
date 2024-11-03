@@ -30,9 +30,9 @@ Check UID & GID
 id [user_name]		
 ``` 	
 
-Set password 
+Set password for `alex`
 ```
-passwd natasha
+passwd alex
 ```
 
 Delete a user named `alex`
@@ -101,7 +101,7 @@ gpasswd -M [user1],[user2] [group_name]
 
 User remove from froup 
 ```bash
-gpasswd -d [user] [group]  # -d delete
+gpasswd -d [user] [group]  # -d, --delete
 ```
 
 Change user password expiry information
