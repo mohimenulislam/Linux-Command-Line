@@ -24,7 +24,7 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 
 - `last`: Display the record of all logged users.
 - `id`:  Displays user and group information for a user.
-- whoami`: Displays the currently logged-in username.
+- `whoami`: Displays the currently logged-in username.
 - `w`: Shows who is logged in and what they are doing.
 
 ### Create, modify, and delete user accounts
