@@ -17,8 +17,7 @@ Table of Contents
 - `System Account`
 - `Service Account`
 
-
-![DevOpsBooks](https://github.com/user-attachments/assets/97636ca0-4973-4748-aae5-da11f948450c)
+![AccountTypes](https://github.com/user-attachments/assets/f56415fa-653e-4069-819e-dd818b18e8b8)
 
 ### Necessary Files of User and Group
 - `/etc/group`: Group account information.
