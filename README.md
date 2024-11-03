@@ -18,6 +18,37 @@ Table of Contents
 
 
 
+
+
+
+Create a User
+```
+useradd natasha
+```
+Check UID & GID
+```
+id [user_name]		
+``` 	
+
+
+Set password 
+```
+passwd natasha
+```
+Delete a User
+```
+userdel natasha
+```
+Search specific user
+```
+cat /etc/passwd | grep faisal  #or
+grep -i faisal /etc/passwd
+```
+faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
+usrname:pass :uid   :gid   :comment:homdir   :shell
+
+
+
 Create a new user account named "alex" and assign it the user ID 1015
 ```
 Useradd alex -u 1015
@@ -72,32 +103,6 @@ Change user password expiry information
 
 
 
-
-Create a User
-```
-useradd natasha
-```
-Check UID & GID
-```
-id [user_name]		
-``` 	
-
-
-Set password 
-```
-passwd natasha
-```
-Delete a User
-```
-userdel natasha
-```
-Search specific user
-```
-cat /etc/passwd | grep faisal  #or
-grep -i faisal /etc/passwd
-```
-faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
-usrname:pass :uid   :gid   :comment:homdir   :shell
 
 
 ## File Maintenance Commands
