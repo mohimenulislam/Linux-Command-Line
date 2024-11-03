@@ -12,10 +12,10 @@ Table of Contents
 
 ## Manage User & Group
 ### Account Types
-- `User Account`
-- `Superuser Account`
-- `System Account`
-- `Service Account`
+- `User Account`: Ex: Bob, Michael, Dave
+- `Superuser Account`: Ex: root, UID=0
+- `System Account`: Ex: ssh, mail, UID<100 OR between 500-100 
+- `Service Account`: Ex: nginx, mercury
 
 ![AccountTypes](https://github.com/user-attachments/assets/f56415fa-653e-4069-819e-dd818b18e8b8)
 
@@ -31,10 +31,7 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
 
-- `last`: Display the record of all logged users.
-- `id`:  Displays user and group information for a user.
-- `whoami`: Displays the currently logged-in username.
-- `w`: Shows who is logged in and what they are doing.
+
 
 ### Create, modify, and delete user accounts
 - `useradd`: Creates a new user account.
@@ -43,6 +40,10 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 - `usermod`: Modifies an existing user account.
 - `chage`: change user password expiry information
 - `passwd`: Sets or changes a user's password
+- `last`: Display the record of all logged users.
+- `id`:  Displays user and group information for a user.
+- `whoami`: Displays the currently logged-in username.
+- `w`: Shows who is logged in and what they are doing.
 
 
 Create a user named `alex`
