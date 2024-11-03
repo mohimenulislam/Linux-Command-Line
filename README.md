@@ -13,8 +13,10 @@ Table of Contents
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
 - `/etc/login.defs`: Shadow password suite configuration.
-- `/etc/passwd`: User account information.
-Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell`
+- `/etc/passwd`: User account information. <br>
+Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
+     `faisal`:`x`:`1000`:`1000`:`faisal`:`/home/faisal`:`/bin/bash` <br>
+
 - `/etc/shadow`: Secure user account information.<br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
 - `/etc/subgid`: Per user subordinate group IDs.
