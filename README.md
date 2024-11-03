@@ -4,8 +4,8 @@ Table of Contents
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
   * [Necessary Files of User and Group](necessary-files-of-user-and-group)
-  * [User](user)
-  * [Group](group)
+  * [User Manage](user-manage)
+  * [Group Manage](group-manage)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
@@ -20,7 +20,7 @@ Table of Contents
 - `last`: Display the record of all logged users.
 
 
-### User
+### User Manage
 Create a user named `alex`
 ```
 useradd alex
