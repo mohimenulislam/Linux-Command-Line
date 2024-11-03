@@ -21,7 +21,6 @@ Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
-- `/etc/sudoers`: 
 
 - `last`: Display the record of all logged users.
 - `id`:  Displays user and group information for a user.
@@ -158,6 +157,19 @@ chage -M 90 alex #password expire after 90 days
 ```
 
 ### Switch Users and sudo Access
+File
+
+- `/etc/sudoers`: 
+
+Switch `root` user 
+```
+su -
+``` 
+Switch to `alex` user
+```
+su - alex
+```
+
 
 
 ## File Maintenance Commands
