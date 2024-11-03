@@ -70,6 +70,12 @@ Create `nologin` user
 ```
 useradd -s /sbin/nologin nologin_user
 ```
+
+User shell change to nologin
+```bash
+usermod alex -s /sbin/nologin 
+```
+
 ### Group 
 
 Create a group named `sysadmin`
@@ -97,19 +103,15 @@ gpasswd -d [user] [group]  # -d delete
 ```
 
 
-User shell change to nologin
-```bash
-usermod harry -s /sbin/nologin 
-```
-
 
 
 
 Change user password expiry information
-# chage alex
-# chage -l alex	//Show account aging information.
-# chage -M 90 alex	//password expire after 90 days
-
+```bash
+chage alex
+chage -l alex #Show account aging information.
+chage -M 90 alex #password expire after 90 days
+```
 
 
 
