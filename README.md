@@ -74,14 +74,16 @@ groupadd sysadmin		# group add
 ```
 
 A user natasha who belongs to sysadmin as a secondary group. 
-# id natasha 
-# useradd Natasha // 
-# usermod -aG sysadmin natasha
+```bash
+id natasha 	# check id created or not
+useradd Natasha	# id create
+usermod -aG sysadmin natasha	
+```
 
 Multiple user add to group
-# gpasswd -M [user1],[user2] [group_name]
-# gpasswd -M [faisal],[afif] [support_team]
-		      user name 	group name
+```bash
+gpasswd -M [user1],[user2] [group_name]
+```		      
 
 User remove from froup 
 # gpasswd -d [user] [group]
