@@ -3,7 +3,7 @@
 Table of Contents 
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
-  *[Group](group)
+  * [Group](group)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
