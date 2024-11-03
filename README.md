@@ -6,7 +6,7 @@ Table of Contents
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
-# Files
+### Files
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
 - `/etc/login.defs`: Shadow password suite configuration.
