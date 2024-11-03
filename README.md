@@ -2,8 +2,10 @@
 
 Table of Contents 
 ====================
+[Manage User & Group](manage-user-&-groups)<br>
 [File Maintenence Commands](#file-maintenance-commands)
 
+## Manage User & Group
 
 ## File Maintenance Commands
 - `cp`: copy files and directories <br>
