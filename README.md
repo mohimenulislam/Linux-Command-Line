@@ -14,6 +14,90 @@ Table of Contents
 - `/etc/shadow`: Secure user account information.
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
+- `last`: Display the record of all logged users.
+
+
+
+Create a new user account named "alex" and assign it the user ID 1015
+```
+Useradd alex -u 1015
+```
+
+Lock a user named alex
+```
+passwd -l alex
+```
+
+Unlock a User named alex
+```
+passwd -u faisal
+```
+
+Create "nologin" user
+```
+useradd -s /sbin/nologin nologin_user
+```
+
+Create a group named sysadmin
+# getent group sysadmin	// check this group is created or not
+# cat /etc/group | grep sysadmin 
+# groupadd sysadmin		//group add
+
+A user natasha who belongs to sysadmin as a secondary group. 
+# id natasha 
+# useradd Natasha // 
+# usermod -aG sysadmin natasha
+
+Multiple user add to group
+# gpasswd -M [user1],[user2] [group_name]
+# gpasswd -M [faisal],[afif] [support_team]
+		      user name 	group name
+
+User remove from froup 
+# gpasswd -d [user] [group]
+Nologin user create
+# useradd -s /sbin/nologin nologin_user
+User shell change 
+# usermod -s /bin/bash nologin_user
+# usermod harry -s /sbin/nologin 
+User Lock
+#  usermod -L faisal	
+User Unlock
+# usermod -U faisal
+
+Change user password expiry information
+# chage alex
+# chage -l alex	//Show account aging information.
+# chage -M 90 alex	//password expire after 90 days
+
+
+
+
+Create a User
+```
+useradd natasha
+```
+Check UID & GID
+```
+id [user_name]		
+``` 	
+
+
+Set password 
+```
+passwd natasha
+```
+Delete a User
+```
+userdel natasha
+```
+Search specific user
+```
+cat /etc/passwd | grep faisal  #or
+grep -i faisal /etc/passwd
+```
+faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
+usrname:pass :uid   :gid   :comment:homdir   :shell
 
 
 ## File Maintenance Commands
