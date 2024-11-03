@@ -3,6 +3,7 @@
 Table of Contents 
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
+  * [Account Types](account-types) 
   * [Necessary Files of User and Group](necessary-files-of-user-and-group)
   * [Create, modify, and delete user accounts](create-modify-and-delete-user-accounts)
   * [Create, modify, and delete groups](create-modify-and-delete-groups)
@@ -10,6 +11,15 @@ Table of Contents
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
+### Account Types
+- `User Account`
+- `Superuser Account`
+- `System Account`
+- `Service Account`
+
+
+![DevOpsBooks](https://github.com/user-attachments/assets/97636ca0-4973-4748-aae5-da11f948450c)
+
 ### Necessary Files of User and Group
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
@@ -159,7 +169,8 @@ chage -M 90 alex #password expire after 90 days
 ### Switch Users and sudo Access
 File
 
-`/etc/sudoers`: 
+- `/etc/sudoers`: 
+- `visudo`: 
 
 Switch to `root` user 
 ```
