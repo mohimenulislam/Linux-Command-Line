@@ -34,19 +34,20 @@ Set password
 ```
 passwd natasha
 ```
+
 Delete a User
 ```
 userdel natasha
 ```
+
 Search specific user
 ```
 cat /etc/passwd | grep faisal  #or
 grep -i faisal /etc/passwd
 ```
+
 faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
 usrname:pass :uid   :gid   :comment:homdir   :shell
-
-
 
 Create a new user account named `alex` and assign it the user ID 1015
 ```
@@ -56,11 +57,13 @@ Useradd alex -u 1015
 Lock a user named `alex`
 ```
 passwd -l alex
+usermod -L alex
 ```
 
 Unlock a User named `alex`
 ```
-passwd -u faisal
+passwd -u alex
+usermod -U alex
 ```
 
 Create `nologin` user
@@ -99,10 +102,8 @@ User shell change to nologin
 usermod harry -s /sbin/nologin 
 ```
 
-User Lock
-#  usermod -L faisal	
-User Unlock
-# usermod -U faisal
+
+
 
 Change user password expiry information
 # chage alex
