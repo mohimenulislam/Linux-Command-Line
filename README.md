@@ -76,11 +76,11 @@ cat /etc/group | grep sysadmin 	# check
 groupadd sysadmin		# group add
 ```
 
-A user natasha who belongs to sysadmin as a secondary group. 
+A user `alex` who belongs to sysadmin as a secondary group. 
 ```bash
-id natasha 	# check id created or not
-useradd Natasha	# id create
-usermod -aG sysadmin natasha	
+id alex 	# check id created or not
+useradd alex	# id create
+usermod -aG sysadmin alex	
 ```
 
 Multiple user add to group
