@@ -6,6 +6,7 @@ Table of Contents
   * [Necessary Files of User and Group](necessary-files-of-user-and-group)
   * [Create, modify, and delete user accounts](create-modify-and-delete-user-accounts)
   * [Create, modify, and delete groups](create-modify-and-delete-groups)
+  * [Switch Users and sudo Access](switch-users-and-sudo-access)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
@@ -16,11 +17,11 @@ Table of Contents
 - `/etc/passwd`: User account information. <br>
 Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
      `faisal`:`x`:`1000`:`1000`:`faisal`:`/home/faisal`:`/bin/bash` <br>
-
 - `/etc/shadow`: Secure user account information.<br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
+- `/etc/sudoers`: 
 
 - `last`: Display the record of all logged users.
 - `id`:  Displays user and group information for a user.
@@ -61,7 +62,7 @@ Create a new user account named `alex` and assign it the user ID 1015
 Useradd alex -u 1015
 ```
 
-Change the user ID 1001 to `1010` for `alex` user
+Change the user ID `1010` for `alex` user
 ```bash
 usermod -u 1010 alex  # -u, --uid
 
@@ -156,7 +157,7 @@ chage -l alex #Show account aging information.
 chage -M 90 alex #password expire after 90 days
 ```
 
-
+### Switch Users and sudo Access
 
 
 ## File Maintenance Commands
