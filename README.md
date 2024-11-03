@@ -4,7 +4,7 @@ Table of Contents
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
   * [Necessary Files of User and Group](necessary-files-of-user-and-group)
-  * [User Manage](user-manage)
+  * [Create, modify, and delete user accounts](create,-modify,-and-delete-user-accounts)
   * [Group Manage](group-manage)
 * [File Maintenence Commands](#file-maintenance-commands)
 
@@ -24,7 +24,11 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 - `last`: Display the record of all logged users.
 
 
-### User Manage
+### Create, modify, and delete user accounts
+- `useradd`
+- `userdel`
+- `usermod`
+
 Create a user named `alex`
 ```
 useradd alex
