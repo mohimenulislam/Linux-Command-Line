@@ -19,6 +19,11 @@ Table of Contents
 
 ![AccountTypes](https://github.com/user-attachments/assets/f56415fa-653e-4069-819e-dd818b18e8b8)
 
+User shell prompt
+<img width="179" alt="Screenshot_71" src="https://github.com/user-attachments/assets/3bdd57f1-3a5b-4aa1-80cd-d71abf73c3ad">
+Root user shell prompt
+<img width="161" alt="Screenshot_11" src="https://github.com/user-attachments/assets/94b8576b-f605-4675-9f06-30880f0049ba">
+
 ### Necessary Files of User and Group
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
@@ -51,8 +56,10 @@ Create a user named `alex`
 useradd alex
 ```
 Check UID & GID
-```
-id [user_name]		
+```bash
+id faisal
+#faisal:    x:1000:1000:test:   /home/faisal: /bin/bash
+#usrname:pass:uid :gid :comment:homdir      :shell
 ``` 	
 
 Set password for `alex`
@@ -89,8 +96,7 @@ grep -i faisal /etc/passwd
 ```
 
 
-faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
-usrname:pass :uid   :gid   :comment:homdir   :shell
+
 
 
 
