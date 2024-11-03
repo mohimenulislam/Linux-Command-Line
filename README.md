@@ -18,18 +18,14 @@ Table of Contents
 
 
 
-
-
-
-Create a User
+Create a user named `alex`
 ```
-useradd natasha
+useradd alex
 ```
 Check UID & GID
 ```
 id [user_name]		
 ``` 	
-
 
 Set password 
 ```
@@ -49,30 +45,33 @@ usrname:pass :uid   :gid   :comment:homdir   :shell
 
 
 
-Create a new user account named "alex" and assign it the user ID 1015
+Create a new user account named `alex` and assign it the user ID 1015
 ```
 Useradd alex -u 1015
 ```
 
-Lock a user named alex
+Lock a user named `alex`
 ```
 passwd -l alex
 ```
 
-Unlock a User named alex
+Unlock a User named `alex`
 ```
 passwd -u faisal
 ```
 
-Create "nologin" user
+Create `nologin` user
 ```
 useradd -s /sbin/nologin nologin_user
 ```
+### Group 
 
-Create a group named sysadmin
-# getent group sysadmin	// check this group is created or not
-# cat /etc/group | grep sysadmin 
-# groupadd sysadmin		//group add
+Create a group named `sysadmin`
+```bash
+getent group sysadmin		# check this group is created or not
+cat /etc/group | grep sysadmin 	# check
+groupadd sysadmin		# group add
+```
 
 A user natasha who belongs to sysadmin as a secondary group. 
 # id natasha 
