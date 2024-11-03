@@ -56,6 +56,17 @@ userdel alex    # or
 userdel -f alex # -f, --force 
 ```
 
+Create a new user account named `alex` and assign it the user ID 1015
+```
+Useradd alex -u 1015
+```
+
+Change the user ID 1001 to `1010` for `alex` user
+```bash
+usermod -u 1010 alex  # -u, --uid
+
+```
+
 Rename login username
 ```bash
 usermod -l new_username old_username
@@ -71,10 +82,7 @@ grep -i faisal /etc/passwd
 faisal:    x  	    :1000:1000:test:   /home/faisal: /bin/bash<br>
 usrname:pass :uid   :gid   :comment:homdir   :shell
 
-Create a new user account named `alex` and assign it the user ID 1015
-```
-Useradd alex -u 1015
-```
+
 
 Lock a user named `alex`
 ```
