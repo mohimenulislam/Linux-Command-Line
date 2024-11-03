@@ -15,6 +15,7 @@ Table of Contents
 - `/etc/login.defs`: Shadow password suite configuration.
 - `/etc/passwd`: User account information.
 - `/etc/shadow`: Secure user account information.
+  username:password:last password change:min:max:warning:inactive:expired
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
 - `last`: Display the record of all logged users.
@@ -78,7 +79,7 @@ User shell change to nologin
 usermod alex -s /sbin/nologin 
 ```
 
-### Group 
+### Group Manage
 
 Create a group named `sysadmin`
 ```bash
