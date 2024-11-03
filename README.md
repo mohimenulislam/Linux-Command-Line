@@ -3,6 +3,7 @@
 Table of Contents 
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
+  *[Group](group)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
@@ -86,12 +87,16 @@ gpasswd -M [user1],[user2] [group_name]
 ```		      
 
 User remove from froup 
-# gpasswd -d [user] [group]
-Nologin user create
-# useradd -s /sbin/nologin nologin_user
-User shell change 
-# usermod -s /bin/bash nologin_user
-# usermod harry -s /sbin/nologin 
+```bash
+gpasswd -d [user] [group]  # -d delete
+```
+
+
+User shell change to nologin
+```bash
+usermod harry -s /sbin/nologin 
+```
+
 User Lock
 #  usermod -L faisal	
 User Unlock
