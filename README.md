@@ -35,9 +35,10 @@ Set password
 passwd natasha
 ```
 
-Delete a User
-```
-userdel natasha
+Delete a user named `alex`
+```bash
+userdel alex    # or
+userdel -f alex # -f, --force 
 ```
 
 Search specific user
@@ -102,10 +103,6 @@ User remove from froup
 ```bash
 gpasswd -d [user] [group]  # -d delete
 ```
-
-
-
-
 
 Change user password expiry information
 ```bash
