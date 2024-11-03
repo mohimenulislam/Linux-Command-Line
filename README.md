@@ -1,7 +1,11 @@
 # Linux Command Line
 
-## File Maintenance Commands
+Table of Contents 
+====================
+[File Maintenence Commands](#file-maintenance-commands)
 
+
+## File Maintenance Commands
 - `cp`: copy files and directories <br>
 - `mv`: move (rename) files <br>
 - `mkdir`: remove empty directories <br>
@@ -12,10 +16,18 @@
 - `chgrp`: chgrp - change group ownership <br>
 - `chown`: change file owner and group <br>
 
-
-- `cp testfile.txt /tmp`: Copy testfile.txt file from currentdirectory to /tmp <br>
-- `rm testfile.txt`:	Delete testfile.txt <br>
-- `rm testfile.txt testfile1.txt`: Delete multiple files, required permission <br>
+Copy testfile.txt file from current directory to /tmp <br>
+```
+cp testfile.txt /tmp
+```
+Delete testfile.txt <br>
+```
+rm testfile.txt
+```
+Delete multiple files, required permission <br>
+```
+rm testfile.txt testfile1.txt
+```
 - `rm -rf testfile.txt testfile1.txt`: Delete multiple files, no permission required
 - `rm -rf *`:	Delete all files, directories<br>
 - `mv testfile /tmp`: Move testfile.txt from current directory to /tmp	<br>
