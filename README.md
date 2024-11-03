@@ -2,10 +2,19 @@
 
 Table of Contents 
 ====================
-[Manage User & Group](manage-user-&-groups)<br>
-[File Maintenence Commands](#file-maintenance-commands)
+* [Manage User & Group](manage-user-&-groups)<br>
+* [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
+# Files
+- `/etc/group`: Group account information.
+- `/etc/gshadow`: Secure group account information.
+- `/etc/login.defs`: Shadow password suite configuration.
+- `/etc/passwd`: User account information.
+- `/etc/shadow`: Secure user account information.
+- `/etc/subgid`: Per user subordinate group IDs.
+- `/etc/subuid`: Per user subordinate user IDs.
+
 
 ## File Maintenance Commands
 - `cp`: copy files and directories <br>
