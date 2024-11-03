@@ -116,6 +116,16 @@ User remove from froup
 gpasswd -d [user] [group]  # -d, --delete
 ```
 
+Delete group named `sysadmin`
+```
+groupdel sysadmin
+```
+
+Change group name `admin` to `sysadmin`
+```
+groupmod admin -n sysadmin
+```
+
 Change user password expiry information
 ```bash
 chage alex
