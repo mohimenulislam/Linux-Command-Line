@@ -14,7 +14,7 @@ Table of Contents
 - `/etc/gshadow`: Secure group account information.
 - `/etc/login.defs`: Shadow password suite configuration.
 - `/etc/passwd`: User account information.
-- `/etc/shadow`: Secure user account information.
+- `/etc/shadow`: Secure user account information.<br>
   username:password:last password change:min:max:warning:inactive:expired
 - `/etc/subgid`: Per user subordinate group IDs.
 - `/etc/subuid`: Per user subordinate user IDs.
