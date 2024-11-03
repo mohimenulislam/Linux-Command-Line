@@ -6,7 +6,7 @@ Table of Contents
   * [Necessary Files of User and Group](necessary-files-of-user-and-group)
   * [Create, modify, and delete user accounts](create-modify-and-delete-user-accounts)
   * [Create, modify, and delete groups](create-modify-and-delete-groups)
-  * [Switch Users and sudo Access](switch-users-and-sudo-access)
+    [Switch Users and sudo Access](switch-users-and-sudo-access)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
@@ -159,16 +159,18 @@ chage -M 90 alex #password expire after 90 days
 ### Switch Users and sudo Access
 File
 
-- `/etc/sudoers`: 
+`/etc/sudoers`: 
 
-Switch `root` user 
+Switch to `root` user 
 ```
 su -
 ``` 
 Switch to `alex` user
+
 ```
 su - alex
 ```
+
 
 
 
