@@ -3,11 +3,13 @@
 Table of Contents 
 ====================
 * [Manage User & Group](manage-user-&-groups)<br>
+  * [Necessary Files of User and Group](necessary-files-of-user-and-group)
+  * [User](user)
   * [Group](group)
 * [File Maintenence Commands](#file-maintenance-commands)
 
 ## Manage User & Group
-### Files
+### Necessary Files of User and Group
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
 - `/etc/login.defs`: Shadow password suite configuration.
@@ -18,7 +20,7 @@ Table of Contents
 - `last`: Display the record of all logged users.
 
 
-
+### User
 Create a user named `alex`
 ```
 useradd alex
