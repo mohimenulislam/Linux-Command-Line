@@ -119,6 +119,10 @@ getent group sysadmin		# check this group is created or not
 cat /etc/group | grep sysadmin 	# check
 groupadd sysadmin		# group add
 ```
+Create sysadmin group and set gid=600
+```bash
+groupadd -g 600 sysadmin
+```
 
 A user `alex` who belongs to sysadmin as a secondary group. 
 ```bash
