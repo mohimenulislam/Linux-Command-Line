@@ -121,7 +121,8 @@ groupadd sysadmin		# group add
 ```
 Create sysadmin group and set gid=600
 ```bash
-groupadd -g 600 sysadmin
+groupadd -g 600 sysadmin     # or
+groupadd sysadmin -g 600
 ```
 
 A user `alex` who belongs to sysadmin as a secondary group. 
