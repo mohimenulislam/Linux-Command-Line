@@ -50,6 +50,11 @@ Set password for `alex`
 passwd alex
 ```
 
+Root password change
+```bash
+echo 1234 | passwd --stdin root
+```
+
 Delete a user named `alex`
 ```bash
 userdel alex    # or
