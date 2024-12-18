@@ -34,4 +34,28 @@ Display file or file system status
 stat file.txt  # The stat command in Linux is a powerful tool used to display detailed information about a file or file system. It's like a file inspector, giving you a comprehensive report on various attributes.
 ```
 
+#### SOft Link
+
+Suppose we create a Soft Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
+
+```bash
+ln -s /tmp/data/serverinfo.txt /root/Desktop/  # shortcut name will be serverinfo.txt
+or
+ln -s /tmp/data/serverinfo.txt /root/Desktop/symlinkserverinfo.txt  # shortcut name will be symlinkserverinfo.txt
+
+ls -li   # check
+```
+It will create a shortcut in `Desktop` and both inode number is different.
+If the main file deleted, then shortcut shows Red color
+
+![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/ff4bc7693ae87dfbd3f0536b16eaf178ee31994d/Img/soft_link_main_file_deleted.png)
+
+#### Hard Link
+
+Suppose we create a Hard Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
+```bash
+ln /tmp/data/serverinfo.txt /root/Desktop/
+```
+Both inode number will be same
+
 
