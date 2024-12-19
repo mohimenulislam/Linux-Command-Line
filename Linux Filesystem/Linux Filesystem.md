@@ -1,8 +1,49 @@
 ## Linux Filesystem
+
+### Listing Files and Directories
+
+```bash
+ls  # list
+ls -a # -a: list all
+ls -al  # -l: use a long listing format
+ls -alh  #: -h: human-readable
+ll 
+```
+Current working directory
+```bash
+pwd  # print working directory
+```
+
+
+
+
+### Filesystem Tree
+![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/5d2f78a071cda779e92e3e732b0f127662e77e1d/Img/file_system_tree.png)
+
+
+### Change directory 
+```bash
+cd   # Go to home directory
+cd / # Go to root directory
+cd - # Go to previous directory
+cd /var/log
+cd /home/aaron
+cd .. # parent directory
+```
+
+### Creating Files
+```bash
+touch receipt.txt
+touch /home/aaron/receipt.txt
+```
+### Creating Directories
+```bash
+mkdir test_directories
+```
+
 ### File Maintenance Commands
 - `cp`: copy files and directories <br>
 - `mv`: move (rename) files <br>
-- `mkdir`: remove empty directories <br>
 - `rmdir`: remove empty directories <br>
 - `rm`: remove files or directories <br>
 - `rm-r`: remove directories and their contents recursively <br>
