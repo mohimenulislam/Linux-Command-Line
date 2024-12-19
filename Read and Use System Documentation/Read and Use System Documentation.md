@@ -41,7 +41,10 @@ apropos "director"  # Search for directory related command
 ```
 
 #### systemctl command in linux
-systemctl - Control the systemd system and service manager
+- `systemctl` is the command-line tool you use to interact with `systemd`
+- `systemctl` is the command-line utility used to control and manage `systemd`
+- `systemctl` commands to tell `systemd` what to do, like starting or stopping services, checking their status, and configuring system settings.
+- systemctl - Control the systemd system and service manager
 ```bash
 systemctl [TAB]
 ```
