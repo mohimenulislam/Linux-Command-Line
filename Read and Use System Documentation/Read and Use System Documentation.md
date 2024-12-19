@@ -16,13 +16,17 @@ help help
 
 #### journalctl Command in Linux
 journalctl is a powerful command-line tool in Linux systems that provides access to the systemd journal, a centralized logging system.
+journalctl - Query the systemd journal
+
 ```bash
 journalctl--help
 ```
 
 #### man Command in Linux
-
+man - an interface to the system reference manuals
 ```bash
+man man
+man mkdir
 man journalctl
 ```
 
@@ -35,3 +39,10 @@ apropos director # Search for directory related command
 # or
 apropos "director"  # Search for directory related command
 ```
+
+#### systemctl command in linux
+systemctl - Control the systemd system and service manager
+```bash
+systemctl [TAB]
+```
+
