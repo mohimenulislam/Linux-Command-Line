@@ -40,6 +40,23 @@ touch /home/aaron/receipt.txt
 ```bash
 mkdir test_directories
 ```
+### Absolute Path & Relative Path
+
+A path is a unique location to a file or a folder in a file system of an OS. A path to a file is a combination of / and alpha-numeric characters.
+
+#### Absolute Path
+An absolute path is defined as the specifying the location of a file or directory from the root directory(/). In other words we can say absolute path is a complete path from start of actual filesystem from / directory.
+```bash
+/var/log/cron
+/boot/grub/grub.conf
+```
+
+
+#### Relative Path
+Relative path is defined as path related to the present working directory(pwd). Suppose I am located in /var/log and I want to change directory to /var/log/kernel. I can use relative path concept to change directory to kernel
+
+
+
 
 ### File Maintenance Commands
 - `cp`: copy files and directories <br>
