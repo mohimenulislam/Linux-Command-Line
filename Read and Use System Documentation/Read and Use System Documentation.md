@@ -49,3 +49,7 @@ apropos "director"  # Search for directory related command
 systemctl [TAB]
 ```
 
+Display file or file system status
+```bash
+stat file.txt  # The stat command in Linux is a powerful tool used to display detailed information about a file or file system. It's like a file inspector, giving you a comprehensive report on various attributes.
+```
