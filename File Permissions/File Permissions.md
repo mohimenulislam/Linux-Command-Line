@@ -7,6 +7,18 @@ How to Check the Permission of Files in Linux
 ls -l <file_name>
 ```
 
+
+
+Identifier |	File Type 
+--- | --- |
+ `d` | DIRECTORY
+ `-` | REGULAR FILE
+ `c` | CHARACTER DEVICE
+ `l` | LINK
+ `s` | SOCKET FILE
+ `p` | PIPE
+ `b` | BLOCK DEVICE
+
 ### There are 3 type of permissions 
 
 - `r` - `4` - read
