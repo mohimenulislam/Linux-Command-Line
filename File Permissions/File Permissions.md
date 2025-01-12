@@ -11,13 +11,13 @@ ls -l <file_name>
 
 Identifier |	File Type 
 --- | --- |
- `d` | DIRECTORY
- `-` | REGULAR FILE
- `c` | CHARACTER DEVICE
- `l` | LINK
- `s` | SOCKET FILE
- `p` | PIPE
- `b` | BLOCK DEVICE
+ `d` | Directory
+ `-` | REGULAR File
+ `c` | Character Device
+ `l` | Link
+ `s` | SOCKET File
+ `p` | Pipe
+ `b` | Block Device
 
 ### There are 3 type of permissions 
 
