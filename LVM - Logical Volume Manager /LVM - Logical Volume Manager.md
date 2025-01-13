@@ -87,3 +87,9 @@ vi /etc/fstab
 mount -a # Finally, mount the logical volume again to make sure it's properly mounted
 ```
 
+
+#### Extend or Resize the LVM partition `/dev/myvolume/mydatabase` into 830 MiB from the current size and  mount the  LVM `/dev/myvolume/mydatabase` to a mount point `/database`. The extended partition size must be within approximately `830MiB` to `850MiB`.
+
+```bash
+lvresize -rv -L 830M /dev/myvolume/mydatabase 
+```
