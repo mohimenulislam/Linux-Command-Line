@@ -46,3 +46,44 @@ vgdisplay
 Create the Logical Volume (LV):
 Create the `mydatabase` logical volume within the "myvolume" volume group with 100 
 P.E. (physical extents):
+
+```bash
+lvcreate -l 100 -n mydatabase myvolume
+lvdisplay
+```
+
+##### Format the Logical Volume:
+Format the "mydatabase" logical volume with the ext4 file system: 
+
+```bash
+mkfs.ext4 /dev/myvolume/mydatabase
+```
+##### Create the Mount Point:
+Create a directory `/database` for the mount point.
+
+```bash
+mkdir /database 
+```
+
+##### Mount the Logical Volume:
+Mount the `mydatabase` logical volume to the `/database` directory: 
+
+```bash
+mount /dev/myvolume/mydatabase /database/
+lsblk
+```
+
+##### Make the Mount Permanent:
+To ensure the logical volume is mounted permanently on boot, you'll need to add an entry to your `/etc/fstab` file. Open the `/etc/fstab` file in a text editor and add the following line: 
+
+```bash
+vi /etc/fstab
+# /dev/myvolume/mydatabase /database ext4 defaults 0 0 
+# or
+# blkid, copy UUID
+# UUID="864d6ceb-a5ec-4e54-ae59-b67d6eed156e" /database ext4 defaults 0 0
+# UUID is best practice
+
+mount -a # Finally, mount the logical volume again to make sure it's properly mounted
+```
+
