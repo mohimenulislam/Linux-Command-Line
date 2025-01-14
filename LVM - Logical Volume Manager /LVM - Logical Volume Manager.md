@@ -105,7 +105,28 @@ lvresize -rv -L 830M /dev/myvolume/mydatabase
 Physical Extent is the smallest unit of storage in a volume group in the Logical Volume Manager (LVM) system. It represents `chunks` of storage space that the volume group is divided into. When you create logical volumes, they are allocated in terms of these physical extents
 
 ##### Volume Group (VG):
-A Volume Group is a `storage pool` that aggregates one or more Physical Volumes (PVs) (e.g., disks, partitions, or RAID arrays) into a single logical unit. Once created, you can allocate storage from this pool to create Logical Volumes (LVs).
+A Volume Group is a `storage pool` that aggregates one or more `Physical Volumes (PVs)` (e.g., disks, partitions, or RAID arrays) into a single logical unit. Once created, you can allocate storage from this pool to create Logical Volumes (LVs).
 
+ - A VG can include multiple physical devices (e.g., /dev/sda, /dev/sdb).
+ - It abstracts the underlying hardware, treating all the combined physical volumes as one large storage unit.
+ - You can add more physical volumes to an existing VG to increase its storage capacity.
+ - A VG is divided into physical extents (PEs), which are the smallest allocatable units in LVM.
 
+Create Physical Volumes (PVs):
+```bash
+pvcreate /dev/sda /dev/sdb
+```
+Create a Volume Group (VG): Combine the physical volumes into a single volume group named `myvolume`
+```bash
+vgcreate myvolume /dev/sda /dev/sdb
+```
+
+Check VG Details: Use the vgdisplay command to see information about the VG:
+```bash
+vgdisplay myvolume
+```
+
+##### Logical Volume (LV):
+
+   
 ##### MiB
