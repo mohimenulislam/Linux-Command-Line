@@ -1,7 +1,7 @@
 
 #### Create the volume group with name `myvolume` with `8MiB P.E.` and create the lvm name `mydatabase` with the `100P.E.` format this lvm with ext4 and create a directory `/database` & mount this lvm permanently on `/database`. 
 
-![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/d1935df4e8f8f16f7cb34736e6e5e05bbac46df2/Img/lvm.png)
+![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/3fbfec44a479a4017b18eb6425965069da2ed080/Img/lvm.png)
 
 ##### Create the Physical Volume (PV): 
 
@@ -102,6 +102,10 @@ lvresize -rv -L 830M /dev/myvolume/mydatabase
 #### Background Study
 
 ##### Physical Extent (PE): 
-Physical Extent is the smallest unit of storage in a volume group in the Logical Volume Manager (LVM) system. It represents chunks of storage space that the volume group is divided into. When you create logical volumes, they are allocated in terms of these physical extents
+Physical Extent is the smallest unit of storage in a volume group in the Logical Volume Manager (LVM) system. It represents `chunks` of storage space that the volume group is divided into. When you create logical volumes, they are allocated in terms of these physical extents
+
+##### Volume Group (VG):
+A Volume Group is a `storage pool` that aggregates one or more Physical Volumes (PVs) (e.g., disks, partitions, or RAID arrays) into a single logical unit. Once created, you can allocate storage from this pool to create Logical Volumes (LVs).
+
 
 ##### MiB
