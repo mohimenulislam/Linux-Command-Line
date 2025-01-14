@@ -1,6 +1,8 @@
 
 #### Create the volume group with name `myvolume` with `8MiB P.E.` and create the lvm name `mydatabase` with the `100P.E.` format this lvm with ext4 and create a directory `/database` & mount this lvm permanently on `/database`. 
 
+![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/d1935df4e8f8f16f7cb34736e6e5e05bbac46df2/Img/lvm.png)
+
 ##### Create the Physical Volume (PV): 
 
 - Add Hard Disk from VMware/Virtual Box as per requirement.
@@ -39,7 +41,7 @@ pvdisplay
 Create the `myvolume` volume group using the physical volume created earlier in the previous step
 
 ```bash
-vgcreate myvolume -s 8M /dev/sdb1
+vgcreate myvolume -s 8M /dev/sdb1  # -s: physicalextentsize
 vgdisplay
 ```
 
@@ -48,7 +50,9 @@ Create the `mydatabase` logical volume within the "myvolume" volume group with 1
 P.E. (physical extents):
 
 ```bash
-lvcreate -l 100 -n mydatabase myvolume
+lvcreate -l 100 -n mydatabase myvolume   # 100 P.E.
+# or
+lvcreate -L 800M -n mydatabase myvolume  # 800 MiB
 lvdisplay
 ```
 
@@ -93,3 +97,11 @@ mount -a # Finally, mount the logical volume again to make sure it's properly mo
 ```bash
 lvresize -rv -L 830M /dev/myvolume/mydatabase 
 ```
+
+
+#### Background Study
+
+##### Physical Extent (PE): 
+Physical Extent is the smallest unit of storage in a volume group in the Logical Volume Manager (LVM) system. It represents chunks of storage space that the volume group is divided into. When you create logical volumes, they are allocated in terms of these physical extents
+
+##### MiB
