@@ -45,7 +45,7 @@ vgcreate myvolume -s 8M /dev/sdb1  # -s: physicalextentsize
 vgdisplay
 ```
 
-Create the Logical Volume (LV):
+##### Create the Logical Volume (LV):
 Create the `mydatabase` logical volume within the "myvolume" volume group with 100 
 P.E. (physical extents):
 
@@ -91,6 +91,16 @@ vi /etc/fstab
 mount -a # Finally, mount the logical volume again to make sure it's properly mounted
 ```
 
+
+#### Delete LVM
+
+```bash
+umount /dev/myvolume/mydatabase
+umount /dev/myvolume/mydatabase
+
+fdisl /dev/sdb
+# press `d` for delete LVM  partition
+```
 
 #### Extend or Resize the LVM partition `/dev/myvolume/mydatabase` into 830 MiB from the current size and  mount the  LVM `/dev/myvolume/mydatabase` to a mount point `/database`. The extended partition size must be within approximately `830MiB` to `850MiB`.
 
