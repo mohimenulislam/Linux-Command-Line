@@ -100,6 +100,8 @@ umount /dev/myvolume/mydatabase
 
 fdisl /dev/sdb
 # press `d` for delete LVM  partition
+# press `w` for write
+# Remove record from /etc/fstab
 ```
 
 #### Extend or Resize the LVM partition `/dev/myvolume/mydatabase` into 830 MiB from the current size and  mount the  LVM `/dev/myvolume/mydatabase` to a mount point `/database`. The extended partition size must be within approximately `830MiB` to `850MiB`.
