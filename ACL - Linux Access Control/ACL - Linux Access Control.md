@@ -52,11 +52,9 @@ setfacl -b /file_or_directory   # b - --remove-all
 ### Default ACL  
 To allow all files or directories to inherit ACL entries from the directory it is within
 
-All  operations  apply  to the Default ACL. Regular ACL entries in the input set are promoted to Default ACL entries. Default ACL entries in the input set are discarded. (A warning is issued if that happens).
-
-
 ```bash
-
+setfacl -d -m u:root:rwx /common
+setfacl -d -m groupname:rwx /common
 ```
 
 
