@@ -12,6 +12,51 @@ In Linux, an ACL (Access Control List) is a mechanism that allows for more granu
 
 ## How to manage ACLs in Linux:
 
-- `getfacl` - The getfacl command allows you to view the current ACLs on a file or directory. 
+- `getfacl` - The getfacl command allows you to view the current ACLs on a file or directory. Ex: `getfacel /filename` or `getfacel /directoryname`
 - `setfacl` - The setfacl command is used to set and modify ACLs on files and directories.
+
+
+### Set ACL for a `user`, `group` & `other`   
+
+```bash
+setfacl -m u:alex:rwx /file_or_directory
+setfacl -m u:alex:rw /file_or_directory
+setfacl -m u:alex:--- /file_or_directory    //no permission on this file or directory      
+setfacl -m g:groupname:rwx /file_or_directory
+setfacl -m o:rwx /file_or_directory
+
+
+# -m - modify
+# u - user
+# g - group
+# o - other
+```
+
+ACL applied file or directory have `+` sign after permission. It's looks like:  
+<br>
+![image](https://github.com/mohimenulislam/Linux-Command-Line/blob/08358d833a9046fef59e0a482f0da9ef7277a86e/Img/aclfile.png)
+
+### Delete an ACL
+
+#### To remove a specific entry
+```bash
+setfacl -x u:alex /file_or_directory
+```
+#### To remove all entries
+
+```bash
+setfacl -b /file_or_directory   # b - --remove-all
+```
+
+
+### Default ACL  
+To allow all files or directories to inherit ACL entries from the directory it is within
+
+All  operations  apply  to the Default ACL. Regular ACL entries in the input set are promoted to Default ACL entries. Default ACL entries in the input set are discarded. (A warning is issued if that happens).
+
+
+```bash
+
+```
+
 
