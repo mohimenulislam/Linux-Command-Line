@@ -36,8 +36,6 @@ useradd alex
 #### Check UID & GID
 ```bash
 id alex
-#alex:     x :1000:1000:test:   /home/faisal: /bin/bash
-#usrname:pass:uid :gid :comment:homdir      :shell
 ``` 	
 
 #### Set password for `alex`
@@ -73,14 +71,17 @@ usermod -u 1010 alex  # -u, --uid
 usermod -l new_username old_username
 ```
 
-## Search specific user
-```
+### Search specific user
+```bash
 cat /etc/passwd | grep faisal  #or
 grep -i faisal /etc/passwd
+
+# alex:     x :1000:1000:test:   /home/faisal: /bin/bash
+# usrname:pass:uid :gid :comment:homdir      :shell
 ```
 
 #### Lock a user named `alex`
-```
+```bash
 passwd -l alex  # --lock This  option is used to lock the password of specified account and it is available to root only. The locking is performed by rendering the          encrypted password into an invalid string (by prefixing the encrypted string with an !). Note that the account is not fully locked  -  the  user  can still log in by other means of authentication such as the ssh public key authentication. Use chage -E 0 user command instead for full account locking.
 
 usermod -L alex   # Lock a user's password. This puts a '!' in front of the encrypted password, effectively disabling the password. You can't use this option with -p or -U.
