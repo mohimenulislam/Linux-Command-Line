@@ -1,11 +1,6 @@
 
 ## Manage User & Group
 
-* [Necessary Files of User and Group](necessary-files-of-user-and-group)
-* [Create, modify, and delete user accounts](create-modify-and-delete-user-accounts)
-* [Create, modify, and delete groups](create-modify-and-delete-groups)
-* [Switch Users and sudo Access](switch-users-and-sudo-access)
-
 
 ### Necessary Files of User and Group
 - `/etc/group`: Group account information.
@@ -34,80 +29,76 @@ Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive
 - `w`: Shows who is logged in and what they are doing.
 
 
-Create a user named `alex`
+#### Create a user named `alex`
 ```
 useradd alex
 ```
-Check UID & GID
+#### Check UID & GID
 ```bash
-id faisal
-#faisal:    x:1000:1000:test:   /home/faisal: /bin/bash
+id alex
+#alex:     x :1000:1000:test:   /home/faisal: /bin/bash
 #usrname:pass:uid :gid :comment:homdir      :shell
 ``` 	
 
-Set password for `alex`
+#### Set password for `alex`
 ```
 passwd alex
 ```
 
-Root password change
+#### Root password change
 ```bash
+passwd # from root account
+# or 
 echo 1234 | passwd --stdin root
 ```
 
-Delete a user named `alex`
+#### Delete a user named `alex`
 ```bash
 userdel alex    # or
 userdel -f alex # -f, --force 
 ```
 
-Create a new user account named `alex` and assign it the user ID 1015
+#### Create a new user account named `alex` and assign it the user ID 1015
 ```
 Useradd alex -u 1015
 ```
 
-Change the user ID `1010` for `alex` user
+#### Change the user ID `1010` for `alex` user
 ```bash
 usermod -u 1010 alex  # -u, --uid
-
 ```
 
-Rename login username
+#### Rename login username
 ```bash
 usermod -l new_username old_username
 ```
 
-Search specific user
+## Search specific user
 ```
 cat /etc/passwd | grep faisal  #or
 grep -i faisal /etc/passwd
 ```
 
-
-
-
-
-
-Lock a user named `alex`
+#### Lock a user named `alex`
 ```
 passwd -l alex  # --lock This  option is used to lock the password of specified account and it is available to root only. The locking is performed by rendering the          encrypted password into an invalid string (by prefixing the encrypted string with an !). Note that the account is not fully locked  -  the  user  can still log in by other means of authentication such as the ssh public key authentication. Use chage -E 0 user command instead for full account locking.
 
 usermod -L alex   # Lock a user's password. This puts a '!' in front of the encrypted password, effectively disabling the password. You can't use this option with -p or -U.
 ```
 
-Unlock a User named `alex`
+#### Unlock a User named `alex`
 ```bash
 passwd -u alex  
 
 usermod -U alex 
 ```
 
-Create `nologin` user
+#### Create `nologin` user
 ```
-useradd -s /sbin/nologin nologin_user
+useradd -s /sbin/nologin nologin_user     # -s, --shell
 ```
 
-User shell change to nologin
+#### User shell change to nologin
 ```bash
 usermod alex -s /sbin/nologin 
 ```
