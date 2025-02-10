@@ -1,5 +1,7 @@
 
-- `chmod`:- change file mode bits
+- `chmod`:- to change permissions
+- `chown`:- to change file ownership
+- `chgrp`:- to change the group
 
 
 How to Check the Permission of Files in Linux
