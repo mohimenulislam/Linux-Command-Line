@@ -1,13 +1,10 @@
+# File Permission 
 
-- `chmod`:- to change permissions
-- `chown`:- to change file ownership
-- `chgrp`:- to change the group
+## Viewing Permissions & Ownership
+- `ls -l` → List files with permissions, owner, and group
+- `ls -ld directory_name` → Show directory permissions
+- `stat filename` → Detailed file permissions and ownership
 
-
-How to Check the Permission of Files in Linux
-```bash
-ls -l <file_name>
-```
 
 ![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/0907537b8a64a24126f4fb0e007c25f5da923a6c/Img/file%20permission.png)
 
@@ -45,3 +42,71 @@ Reference |	Class  | 	Description
 
  - The first character `-` which means it’s a file, `d` which means it’s a directory.
  - Permission settings: `rw-r--r--`
+
+
+### Default Permission of `File` / `Directory` created from `root`
+
+```bash
+d rwx r-x r-x. 3 root root   18 Oct  1 13:41 test
+   7   5   5
+   
+- rw- r-- r--. 1 root root    0 Oct  1 19:16 test.txt
+   6   4   4
+```
+
+
+
+### Default Permission of `File` / `Directory` created from `user`
+
+```bash
+d rwx rwx r-x. 2 alex alex 6 Oct  1 19:25 test
+  7   7   5
+- rw- rw- r--. 1 alex alex 0 Oct  1 19:25 test.txt
+  6   6   4 
+```
+
+## Changing File Permissions (chmod)
+
+### Symbolic Mode:
+
+- `chmod u+x file_name` → Add execute permission for user.
+- `chmod g-w file_name` → Remove write permission for group.
+- `chmod o+r file_name` → Add read permission for others.
+- `chmod +x vpc.sh` → Add execute permission for all.
+- `chmod go+wx file_name` → Add write & execute permission of group and others.
+- `chmod o-rwx /common/admin` → Remove permission from others.
+- `chmod g+s /common/admin` → Files created in "/common/admin/" automatically have group ownership. 
+
+### Numeric Mode (Octal Representation):
+
+- `chmod 644 file_name` → rw-r--r-- (Owner: Read & Write, Group: Read, Others: Read)
+- `chmod 755 file_name` → rwxr-xr-x (Owner: Full, Group & Others: Read & Execute)
+- `chmod 700 file_name` → rwx------ (Only owner has full access)
+
+## Changing Ownership (chown)
+- `chown user file_name` → Change file owner
+- `chown user:group file_name` → Change owner and group
+- `chown :group_name file_name` → Change only group
+- `chown :group_name /common/admin` Change group ownership of /common/admin
+- `chown -R user:group directory/` → Change recursively
+
+
+## Changing Group Ownership (chgrp)
+- `chgrp group_name file_name` → Change group of a file
+- `chgrp -R group_name directory/` → Change group recursively
+
+```bash
+chmod 777 <file_name/directory_name>
+chmod -R 777 <directory_name>  # Apply recursively to a directory
+
+chmod u+x file  #
+chmod g+w /common/admin  # Give write permission of group.
+ # Give execute permission of user, group & others.
+
+```
+
+#### Change ownership 
+
+```bash
+
+```
