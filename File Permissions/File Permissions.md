@@ -84,6 +84,7 @@ d rwx rwx r-x. 2 alex alex 6 Oct  1 19:25 test
 - `chmod 644 file_name` → rw-r--r-- (Owner: Read & Write, Group: Read, Others: Read)
 - `chmod 755 file_name` → rwxr-xr-x (Owner: Full, Group & Others: Read & Execute)
 - `chmod 700 file_name` → rwx------ (Only owner has full access)
+- `chmod -R 777 directory_name` → Apply recursively to a directory
 
 ## Changing Ownership (chown)
 - `chown user file_name` → Change file owner
@@ -97,18 +98,5 @@ d rwx rwx r-x. 2 alex alex 6 Oct  1 19:25 test
 - `chgrp group_name file_name` → Change group of a file
 - `chgrp -R group_name directory/` → Change group recursively
 
-```bash
-chmod 777 <file_name/directory_name>
-chmod -R 777 <directory_name>  # Apply recursively to a directory
 
-chmod u+x file  #
-chmod g+w /common/admin  # Give write permission of group.
- # Give execute permission of user, group & others.
 
-```
-
-#### Change ownership 
-
-```bash
-
-```
