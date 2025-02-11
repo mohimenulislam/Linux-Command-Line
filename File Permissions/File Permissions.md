@@ -77,7 +77,7 @@ d rwx rwx r-x. 2 alex alex 6 Oct  1 19:25 test
 - `chmod o-rwx /common/admin` → Remove permission from others.
 - `chmod g+s /common/admin` → Files created in "/common/admin/" automatically have group ownership.
   
-![image](https://github.com/mohimenulislam/Linux-Command-Line/blob/3e1beab0df8f13a789ef915f1e62cf2881896b60/Img/groupownership.png)
+![image](https://github.com/mohimenulislam/Linux-Command-Line/blob/9c9d61dd3fb03ecd7104b0a72a40bf03bff37ebd/Img/groupownershipchange.png)
 
 ### Numeric Mode (Octal Representation):
 
