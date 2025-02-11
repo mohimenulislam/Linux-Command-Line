@@ -19,11 +19,11 @@ In Linux, an ACL (Access Control List) is a mechanism that allows for more granu
 ### Set ACL for a `user`, `group` & `other`   
 
 ```bash
-setfacl -m u:alex:rwx /file_or_directory
-setfacl -m u:alex:rw /file_or_directory
-setfacl -m u:alex:--- /file_or_directory    //no permission on this file or directory      
-setfacl -m g:groupname:rwx /file_or_directory
-setfacl -m o:rwx /file_or_directory
+setfacl -m u:alex:rwx /file_name_or_directory
+setfacl -m u:alex:rw /file_name_or_directory
+setfacl -m u:alex:--- /file_name_or_directory    //no permission on this file or directory      
+setfacl -m g:groupname:rwx /file_name_or_directory
+setfacl -m o:rwx /file_name_or_directory
 
 
 # -m - modify
