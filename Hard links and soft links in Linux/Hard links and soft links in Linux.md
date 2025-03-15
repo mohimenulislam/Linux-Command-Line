@@ -44,6 +44,7 @@ or
 ln -s /tmp/data/serverinfo.txt /root/Desktop/symlinkserverinfo.txt  # shortcut name will be symlinkserverinfo.txt
 
 ls -li   # check
+unlink /root/Desktop/symlinkserverinfo.txt    # unlink
 ```
 ***It will create a shortcut in `Desktop` and both inode number is different.***
 ***If the main file deleted, then shortcut shows Red color.***
@@ -56,6 +57,6 @@ ls -li   # check
 ```bash
 ln /tmp/data/serverinfo.txt /root/Desktop/
 ```
-Both inode number will be same
+Both inode number will be same. There is no path like soft link.
 
 
