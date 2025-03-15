@@ -119,4 +119,31 @@ mv testfolder1/* testfolder2
 Suppose root has two directories testfolder1 and testfolder2. testfolder1 has five directories folder 1, folder2, folder3, folder4, folder5. You have to move all folder except folder1 from testfolder1 to testfolder2. mv SOURCE_DIRECTORY/!(unwanted_filename) TARGET_DIRECTORY	 <br>
 ```
 mv testfolder1/!(folder1) testfolder2
-``` 
+```
+
+## Inode 
+An inode (Index Node) is a data structure in Linux file systems that stores metadata about a file or directory, excluding its name and actual data.
+Key Information Stored in an Inode:
+**An inode does not store the file name but contains:**
+
+✅ File type (regular file, directory, symbolic link, etc.)
+
+✅ Permissions (read, write, execute)
+
+✅ Owner (UID) & Group (GID)
+
+✅ Size of the file
+
+✅ Timestamps (creation, modification, access)
+
+✅ Number of hard links
+
+✅ Pointers to data blocks (where the actual file data is stored)
+
+#### Check inode number
+
+```bash
+ls -li
+```
+ 
+
