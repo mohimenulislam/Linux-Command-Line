@@ -34,7 +34,7 @@ Display file or file system status
 stat file.txt  # The stat command in Linux is a powerful tool used to display detailed information about a file or file system. It's like a file inspector, giving you a comprehensive report on various attributes.
 ```
 
-#### SOft Link
+#### Soft Link
 
 Suppose we create a Soft Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
 
