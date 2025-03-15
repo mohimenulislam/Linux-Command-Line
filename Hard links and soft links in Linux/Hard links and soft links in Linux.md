@@ -59,4 +59,6 @@ ln /tmp/data/serverinfo.txt /root/Desktop/
 ```
 Both inode number will be same. There is no path like soft link.
 
+⭐***In production, we use soft links because they work across different file systems (partitions), whereas hard links do not.***
+
 
