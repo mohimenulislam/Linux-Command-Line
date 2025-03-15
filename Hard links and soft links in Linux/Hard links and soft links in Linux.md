@@ -24,19 +24,19 @@ It remains valid even if the target file is deleted. | It becomes invalid when t
 > - Think of the hard disk as being divided into blocks. Some of these blocks are allocated to store the inode table. Each entry in the table represents an inode, which contains metadata about a file.
 
 
-Each iNode has a unique number and Inode number can be seen with the help of ls -li command.
+#### Each iNode has a unique number and Inode number can be seen with the help of `ls -li` command.
 ```bash
 ls -li
 ```
 
-Display file or file system status
+#### Display file or file system status
 ```bash
 stat file.txt  # The stat command in Linux is a powerful tool used to display detailed information about a file or file system. It's like a file inspector, giving you a comprehensive report on various attributes.
 ```
 
-#### Soft Link
+### Soft Link
 
-Suppose we create a Soft Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
+#### Suppose we create a Soft Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
 
 ```bash
 ln -s /tmp/data/serverinfo.txt /root/Desktop/  # shortcut name will be serverinfo.txt
@@ -45,14 +45,14 @@ ln -s /tmp/data/serverinfo.txt /root/Desktop/symlinkserverinfo.txt  # shortcut n
 
 ls -li   # check
 ```
-It will create a shortcut in `Desktop` and both inode number is different.
-If the main file deleted, then shortcut shows Red color
+***It will create a shortcut in `Desktop` and both inode number is different.***
+***If the main file deleted, then shortcut shows Red color.***
 
 ![image alt](https://github.com/mohimenulislam/Linux-Command-Line/blob/ff4bc7693ae87dfbd3f0536b16eaf178ee31994d/Img/soft_link_main_file_deleted.png)
 
-#### Hard Link
+### Hard Link
 
-Suppose we create a Hard Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
+#### Suppose we create a Hard Link between `/tmp/data/serverinfo.txt` to `/root/Desktop/`
 ```bash
 ln /tmp/data/serverinfo.txt /root/Desktop/
 ```
