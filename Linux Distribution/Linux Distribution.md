@@ -38,3 +38,21 @@
 
 **Funtoo** – Improved version of Gentoo.
 
+## 2. Based on Use Case
+### General-Purpose
+Ubuntu, Fedora, Debian, OpenSUSE – Suitable for daily use.
+
+### Enterprise & Server
+RHEL, CentOS, Rocky Linux, SUSE Linux Enterprise – Used in businesses and servers.
+
+### Security & Penetration Testing
+Kali Linux, Parrot OS, BlackArch – For ethical hacking.
+
+### Gaming
+Pop!_OS, Garuda Linux, SteamOS – Optimized for gaming.
+
+### Lightweight
+Puppy Linux, Lubuntu, Tiny Core Linux – Runs on old hardware.
+
+### Privacy-Focused
+Tails, Qubes OS, Whonix – Security and anonymity.
