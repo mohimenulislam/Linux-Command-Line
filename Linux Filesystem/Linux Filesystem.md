@@ -116,10 +116,19 @@ Root has two directories name testfolder1, testfolder2, move all file from testf
 ```
 mv testfolder1/* testfolder2
 ```
-Suppose root has two directories testfolder1 and testfolder2. testfolder1 has five directories folder 1, folder2, folder3, folder4, folder5. You have to move all folder except folder1 from testfolder1 to testfolder2. mv SOURCE_DIRECTORY/!(unwanted_filename) TARGET_DIRECTORY	 <br>
+
+Suppose the root directory contains two directories: `dir1` and `dir2`. `dir1` has five files — `file1`, `file2`, `file3`, `file4`, and `file5`. We need to move all files except `file1` from `dir1` to `dir2`.
+
+From `root` 
+```bash
+[root@localhost ~]# mv dir1/!(file1) dir2
 ```
-mv testfolder1/!(folder1) testfolder2
+
+From `dir1` 
+```bash
+[root@localhost dir1]# mv !(file1) /root/dir2
 ```
+
 
 ## Inode 
 An inode (Index Node) is a data structure in Linux file systems that stores metadata about a file or directory, excluding its name and actual data.
@@ -146,4 +155,6 @@ Key Information Stored in an Inode:
 ls -li
 ```
  
+
+
 
