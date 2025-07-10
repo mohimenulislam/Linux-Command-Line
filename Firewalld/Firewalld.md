@@ -11,7 +11,8 @@ firewall-cmd --permanent --add-port=80/tcp
 firewall-cmd --reload
 firewall-cmd --state
 
-firewall-cmd --list-all-zones  # level of trusted
+firewall-cmd --list-all-zones  # level of trust
 
 
 ```
+If an interface or source is not explicitly assigned to any zone, incoming traffic will be handled by the default zone, which is typically the public zone.
