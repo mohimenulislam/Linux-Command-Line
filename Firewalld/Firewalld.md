@@ -11,6 +11,7 @@ firewall-cmd --permanent --add-port=80/tcp
 firewall-cmd --reload
 firewall-cmd --state
 
-firewall-cmd --list-all-zones
+firewall-cmd --list-all-zones  # level of trusted
+
 
 ```
