@@ -25,8 +25,7 @@
 ## 🛠️ Repository Management
 - `yum repolist` — List all enabled repositories.
 - `yum repolist all` — List all repositories (enabled + disabled).
-- `yum-config-manager --enable repo-name` — Enable a specific repo.
-- `yum-config-manager --disable repo-name` — Disable a repo.
+
 
 
 ## 🧪 Troubleshooting & Verification
