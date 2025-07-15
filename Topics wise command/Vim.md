@@ -13,4 +13,18 @@
 - **Replace Mode:** `R`
 
 
+## Editing Text
+- `r` – replace a single character (and return to command mode)
+- `cc` – replace an entire line (deletes the line and moves into insert mode)
+- `C` / `c$` – replace from the cursor to the end of a line
+- `cw` – replace from the cursor to the end of a word
+- `s` – delete a character (and move into insert mode)
+- `J` – merge the line below to the current one with a space in between them
+- `u` – undo
+- `Ctrl + r` – redo
+- `.` – repeat last command
+
+
+
+gg - 
 
