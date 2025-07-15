@@ -25,6 +25,15 @@
 - `.` – repeat last command
 
 
+## Cutting, Copying And Pasting
+- `yy` – copy (yank) entire line
+- `#yy` – copy the specified number of lines
+- `dd` – cut (delete) entire line
+- `#dd` – cut the specified number of lines
+- `p` – paste after the cursor
+- `P` – paste before the cursor
+
+
 
 gg - 
 
