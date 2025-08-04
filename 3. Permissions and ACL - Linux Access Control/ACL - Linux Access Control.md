@@ -2,6 +2,22 @@
 
 In Linux, an ACL (Access Control List) is a mechanism that allows for more granular control over `file` and `directory` permissions by defining specific access rights for individual `users` and `groups`, going beyond the standard `owner`, `group`, and `other` permissions
 
+Every file or directory in Linux has 3 types of permissions for 3 classes of users:
+| User Class | Description                |
+| ---------- | -------------------------- |
+| **Owner**  | The user who owns the file |
+| **Group**  | Users in the file’s group  |
+| **Others** | Everyone else              |
+
+File Permission Categories:
+| Permission | Symbol | Meaning                                    |
+| ---------- | ------ | ------------------------------------------ |
+| Read       | `r`    | View contents                              |
+| Write      | `w`    | Modify contents                            |
+| Execute    | `x`    | Run a script/binary (or enter a directory) |
+
+
+
 ## Types of ACLs:
 - Access ACLs: Applied directly to a file or directory, specifying the exact permissions for individual users and groups on that specific object. 
 - Default ACLs: Set as a template for a directory, automatically applying specified permissions to any new files or directories created within that directory.
