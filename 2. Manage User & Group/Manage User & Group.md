@@ -5,7 +5,7 @@
 ### Necessary Files of User and Group
 - `/etc/group`: Group account information.
 - `/etc/gshadow`: Secure group account information.
-- `/etc/login.defs`: Shadow password suite configuration.
+- `/etc/login.defs`: configuration file that defines the default settings for user account creation and password policies in Linux.
 - `/etc/passwd`: User account information. <br>
 Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
      `faisal`:`x`:`1000`:`1000`:`faisal`:`/home/faisal`:`/bin/bash` <br>
