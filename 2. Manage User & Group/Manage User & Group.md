@@ -9,6 +9,8 @@
 - `/etc/passwd`: User account information. <br>
 Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
      `faisal`:`x`:`1000`:`1000`:`faisal`:`/home/faisal`:`/bin/bash` <br>
+     <img width="1005" height="191" alt="image" src="https://github.com/user-attachments/assets/65cfbffd-47dd-4914-9942-b7f72c4dd899" />
+
 - `/etc/shadow`: Secure user account information.<br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
 
@@ -119,6 +121,10 @@ Create sysadmin group and set gid=600
 ```bash
 groupadd -g 600 sysadmin     # or
 groupadd sysadmin -g 600
+```
+Change group ID
+```bash
+groupmod -g 1050 sysadmin
 ```
 
 A user `alex` who belongs to sysadmin as a secondary group. 
