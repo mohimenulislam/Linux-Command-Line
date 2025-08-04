@@ -11,8 +11,7 @@ Ex: `username`:`password`:`UID`:`GID`:`comment`:`home`:`shell` <br>
      `faisal`:`x`:`1000`:`1000`:`faisal`:`/home/faisal`:`/bin/bash` <br>
 - `/etc/shadow`: Secure user account information.<br>
 Ex: `username`:`password`:`last password change`:`min`:`max`:`warning`:`inactive`:`expired`
-- `/etc/subgid`: Per user subordinate group IDs.
-- `/etc/subuid`: Per user subordinate user IDs.
+
 
 
 
