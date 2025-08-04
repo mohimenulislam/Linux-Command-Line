@@ -11,3 +11,36 @@ User shell prompt<br>
 <img width="179" alt="Screenshot_71" src="https://github.com/user-attachments/assets/3bdd57f1-3a5b-4aa1-80cd-d71abf73c3ad"> <br>
 Root user shell prompt<br>
 <img width="161" alt="Screenshot_11" src="https://github.com/user-attachments/assets/94b8576b-f605-4675-9f06-30880f0049ba">
+
+
+### Basic Shell Navigation
+
+| Command    | Purpose                      |
+| ---------- | ---------------------------- |
+| `pwd`      | Print current directory path |
+| `ls`       | List files/directories       |
+| `cd /path` | Change directory             |
+| `cd ..`    | Go up one directory          |
+| `cd ~`     | Go to home directory         |
+
+
+### Text Viewing Command
+
+| Command          | Description                                         |
+|------------------|-----------------------------------------------------|
+| `cat file`       | Display the entire contents of a file              |
+| `less file`      | Scroll up/down through file content (more advanced)|
+| `more file`      | View file one page at a time (forward only)        |
+| `head file`      | Show the first 10 lines of a file                  |
+| `head -20 file`| Show the first 20 lines of a file                  |
+| `tail file`      | Show the last 10 lines of a file                   |
+| `tail -20 file`| Show the last 20 lines of a file                   |
+| `tail -f file`   | Continuously monitor a file (e.g., logs)           |
+
+### Manual Pages
+
+| Command          | Description               |
+| ---------------- | ------------------------- |
+| `man command`    | Full manual for a command |
+| `info command`   | Extended documentation    |
+| `command --help` | Quick options summary     |
