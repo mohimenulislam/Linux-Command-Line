@@ -67,6 +67,12 @@ Useradd alex -u 1015
 usermod -u 1010 alex  # -u, --uid
 ```
 
+
+#### Assign user home directory
+```bash
+useradd -d /home/alex_home alex
+```
+
 #### Rename login username
 ```bash
 usermod -l new_username old_username
