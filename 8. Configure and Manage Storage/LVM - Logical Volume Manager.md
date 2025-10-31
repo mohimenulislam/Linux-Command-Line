@@ -145,7 +145,9 @@ vgdisplay myvolume
 ### Another Example
 
 Suppose we have one 1GB disk name `sda`
+
 <img width="531" height="226" alt="image" src="https://github.com/user-attachments/assets/0e0d7f1d-aa29-48b7-a822-c82993a9d8ce" />
+
 Enter the disk that was created earlier from VMware/VirtualBox or another disk where I need to create the LVM.
 ```bash
 fdisk /dev/sda
@@ -181,6 +183,7 @@ vgdisplay
 lvcreate -L 400M -n mydatabase myvolume  # 800 MiB
 lvdisplay
 ```
+
 <img width="627" height="267" alt="image" src="https://github.com/user-attachments/assets/74235f73-c9a9-4f57-953b-9b225d6d551e" />
 
 ##### Format the Logical Volume:
@@ -224,6 +227,7 @@ vgextend myvolume /dev/sda2
 vgdisplay
 pvdisplay
 ```
+
 <img width="921" height="652" alt="image" src="https://github.com/user-attachments/assets/27086ca6-f171-4368-8fc8-7a14812779bf" />
 
 #### LV resize
@@ -237,5 +241,7 @@ lsblk
 ```bash
 lvdisplay
 ```
+
 <img width="693" height="329" alt="image" src="https://github.com/user-attachments/assets/31bfbed9-080c-477f-bd37-962a7e1ce21e" />
+
 Here, Segments 2; it comes from two partition
