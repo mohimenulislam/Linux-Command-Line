@@ -16,7 +16,6 @@ fdisk -l    # manipulate disk partition table, -l:list
 Enter the disk that was created earlier from VMware/VirtualBox or another disk where I need to create the LVM.
 ```bash
 fdisk /dev/sdb
-
 ```
 
 Partiton size will be 850-900 mb because 8MiB PE * 100 PE = 800MB.
@@ -142,3 +141,101 @@ vgdisplay myvolume
 
    
 ##### MiB
+
+### Another Example
+
+Suppose we have one 1GB disk name `sda`
+<img width="531" height="226" alt="image" src="https://github.com/user-attachments/assets/0e0d7f1d-aa29-48b7-a822-c82993a9d8ce" />
+Enter the disk that was created earlier from VMware/VirtualBox or another disk where I need to create the LVM.
+```bash
+fdisk /dev/sda
+```
+#### At first we will create 500 GB partition
+- Press `m` for help.
+- Press `g` for a new empty GPT partition table (In exam no need to change partition table).
+- Press `n` for add a new partition.
+- Partition number (1-128, default 1): Enter
+- First sector (2048-4194270, default 2048): Enter
+- Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-4194270, default 4194270): +500M
+- Press `t` to change the partition type to LVM.
+- Type 30 for LVM partition.
+- Press `p` for print the partition table.
+- Press `w` for write table to disk and exit
+
+<img width="602" height="250" alt="image" src="https://github.com/user-attachments/assets/14a69485-b3d7-4f6c-95ce-7489d542dc7b" />
+
+#### Create PV - Physical Volume
+```bash
+pvcreate /dev/sda1
+pvdisplay 
+```
+##### Create the Volume Group (VG): 
+```bash
+vgcreate myvolume /dev/sda1  
+vgdisplay
+```
+
+##### Create the Logical Volume (LV):
+```bash
+
+lvcreate -L 400M -n mydatabase myvolume  # 800 MiB
+lvdisplay
+```
+<img width="627" height="267" alt="image" src="https://github.com/user-attachments/assets/74235f73-c9a9-4f57-953b-9b225d6d551e" />
+
+##### Format the Logical Volume:
+Format the "mydatabase" logical volume with the ext4 file system: 
+
+##### Create the Mount Point:
+Create a directory `/database` for the mount point.
+
+##### Mount the Logical Volume:
+Mount the `mydatabase` logical volume to the `/database` directory: 
+
+##### Make the Mount Permanent:
+To ensure the logical volume is mounted permanently on boot, you'll need to add an entry to your `/etc/fstab` file. Open the `/etc/fstab` file in a text editor and add the following line: 
+
+
+### Now my current LV size is 400 MB. now we want to extent the size. 
+```bash
+fdisk /dev/sda
+```
+#### At first we will created 500 GB partition, again we will add 500 GB partition
+- Press `n` for add a new partition.
+- Partition number (1-128, default 1): Enter
+- First sector (2048-4194270, default 2048): Enter
+- Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-4194270, default 4194270): +500M
+- Press `t` to change the partition type to LVM.
+- Type 30 for LVM partition.
+- Press `p` for print the partition table.
+- Press `w` for write table to disk and exit
+
+<img width="621" height="279" alt="image" src="https://github.com/user-attachments/assets/2c5dd0b7-bfa5-4c6a-9df8-56085be445ec" />
+
+#### Create PV - Physical Volume
+```bash
+pvcreate /dev/sda2
+pvdisplay 
+```
+
+##### vgextend 
+```bash
+vgextend myvolume /dev/sda2
+vgdisplay
+pvdisplay
+```
+<img width="921" height="652" alt="image" src="https://github.com/user-attachments/assets/27086ca6-f171-4368-8fc8-7a14812779bf" />
+
+#### LV resize
+```bash
+lvresize -rv -L 800M /dev/myvolume/mydatabase
+lsblk
+```
+
+<img width="663" height="278" alt="image" src="https://github.com/user-attachments/assets/fa6a2efe-622f-4113-bfdf-96ad6956802a" />
+
+```bash
+lvdisplay
+```
+<img width="693" height="329" alt="image" src="https://github.com/user-attachments/assets/31bfbed9-080c-477f-bd37-962a7e1ce21e" />
+Here, Segments 2; it comes from two partition
