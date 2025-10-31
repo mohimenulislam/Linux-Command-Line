@@ -164,6 +164,7 @@ groupmod -n sysadmin admin
 
 Change user password expiry information
 ```bash
+chage --help
 chage alex
 chage -l alex #Show account aging information.
 chage -M 90 alex #password expire after 90 days
