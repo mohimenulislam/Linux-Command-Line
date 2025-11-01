@@ -9,10 +9,9 @@ NFS Client >> 192.168.0.11
 ```bash
 yum install nfs-utils -y
 
-sudo systemctl enable nfs-server
-sudo systemctl start nfs-server
-sudo systemctl status nfs-server
-
+systemctl start nfs-server.service
+systemctl enable nfs-server.service
+systemctl status nfs-server.service
 ```
 
 #### Create a Shared Directory
@@ -48,13 +47,17 @@ sudo firewall-cmd --reload
 ```bash
 yum install nfs-utils -y
 
-sudo systemctl enable nfs-server
-sudo systemctl start nfs-server
-sudo systemctl status nfs-server
+systemctl start nfs-server.service
+systemctl enable nfs-server.service
+systemctl status nfs-server.service
 ```
 #### Create a mount point:
 ```bash
 mkdir -p /mnt/nfs/data
+```
+#### Check
+```bash
+showmount -e 192.168.0.10
 ```
 #### Mount the shared directory:
 ```bash
@@ -62,7 +65,7 @@ mount 192.168.0.10:/shared/data /mnt/nfs/data
 ```
 #### Check:
 ```bash
-df -h | grep nfs
+df -h | grep mnt
 ```
 
 ### Test
