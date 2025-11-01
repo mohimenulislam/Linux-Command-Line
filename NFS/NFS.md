@@ -2,6 +2,7 @@
 ## NFS
 
 NFS Server >> 192.168.0.10
+
 NFS Client >> 192.168.0.11
 
 ### NFS Server
